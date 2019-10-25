@@ -13,18 +13,18 @@ import Foundation
 class Game {
     var deck = Deck()
     var player = Player()
-        init(deck: Deck,
-             player: Player,
-             hitPlayer: Bool) {
-            self.deck = deck
-            self.player = player
-           
-        }
+    init(deck: Deck,
+         player: Player,
+         hitPlayer: Bool) {
+        self.deck = deck
+        self.player = player
+        
+    }
     //fix this
     var hasMoreCards:Bool {
         return !deck.cards.isEmpty
     }
-   
+    
     
     func newGame() {
         self.player.score = 0
@@ -46,15 +46,15 @@ class Game {
         
     }
     
-        
- 
-   
-        func hitMe() {
-            let hitCard = self.deck.takeFromDeck()
-            let cardScore = hitCard.value
-            self.player.score += cardScore
+    
+    
+    
+    func hitMe() {
+        let hitCard = self.deck.takeFromDeck()
+        let cardScore = hitCard.value
+        self.player.score += cardScore
     }
-        
+    
     func computerVsPlayer() {
         let randomComputerScore = Int.random(in: 17...23)
         let userScore = self.player.score
@@ -63,7 +63,7 @@ class Game {
         } else {
             print("You Lose")
         }
-       
+        
     }
  
     //fix this cause its not what they wanted

@@ -19,15 +19,6 @@ var playAgain = false
 
 let userPrompt = "Let's Play BlackJack!"
 
-//repeat {
-//    print(userPrompt)
-//    var _ = readLine()
-//  game.deck
-//    cards.randomElement()
-//   
-//
-//
-//
     print("Do you wish to continue playing? (yes, no)")
     let shouldContinuePlaying = readLine() ?? ""
     if shouldContinuePlaying == "yes" {
@@ -36,5 +27,7 @@ let userPrompt = "Let's Play BlackJack!"
     } else {
         playAgain = false
     }
-} while playAgain
+} while playAgain {
+}
 //pushing to git hub
+
