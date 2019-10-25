@@ -11,58 +11,68 @@ import Foundation
 
 
 class Game {
-    var deck = [Card]()
-    var player = [Player]()
-    var hitPlayer = true
-    //    var cards = [Card]()
-    var userScore:Int = 0
-    //    init(deck: [Card],
-    //         player: Player,
-    //         hitPlayer: Bool) {
-    //        self.deck = deck
-    //        self.player = [player]
-    //        self.hitPlayer = hitPlayer
-    //    }
+    var deck = Deck()
+    var player = Player()
+        init(deck: Deck,
+             player: Player,
+             hitPlayer: Bool) {
+            self.deck = deck
+            self.player = player
+           
+        }
     //fix this
     var hasMoreCards:Bool {
-        return self.hasMoreCards
+        return !deck.cards.isEmpty
     }
-    //I do not need this if I am declaring this in the function
-    //    var randomComputerScore = Int.random(in: 17..<24, using: &RandomNumberGenerator) {
-    //
-    //    }
+   
     
     func newGame() {
-        var _ = 0
-        deck.removeAll()
+        self.player.score = 0
+        self.deck = Deck()
     }
     
-    func computerVsPLayer(userScore:Int,randomComputerScore:Int) -> Int {
-        let randomComputerScore = Int.random(in: 17..<24)
+    
+    
+    func hitOrStay() {
+        print("Hit or stay?")
         
+        let hitOrStay = readLine() ?? ""
+        if hitOrStay == "Hit" {
+            self.hitMe()
+        } else {
+            self.computerVsPlayer()
+        }
+        
+        
+    }
+    
+        
+ 
+   
+        func hitMe() {
+            let hitCard = self.deck.takeFromDeck()
+            let cardScore = hitCard.value
+            self.player.score += cardScore
+    }
+        
+    func computerVsPlayer() {
+        let randomComputerScore = Int.random(in: 17...23)
+        let userScore = self.player.score
         if userScore > randomComputerScore && userScore <= 21{
             print("You win!")
         } else {
             print("You Lose")
         }
-        return 0
+       
     }
-    //must fix this!
-    func hitMe() -> Card {
-        if cards.isEmpty {
-            print("no more cards")
-        } else { //use addition
-            result = deck + deck
-        } //have no idea how to append a card from the deck
-    }
-    
+ 
     //fix this cause its not what they wanted
-    func gamesStatus() {
-        if userScore == 21 {
-            print("BlackJack! Play Again?")
-        } else if userScore <= 22 {
-            print("BUST! Play Again?")
-            
-        }
-    }
-}
+//    func gamesStatus() {
+//        if userScore == 21 {
+//            print("BlackJack! Play Again?")
+//        } else if userScore <= 22 {
+//            print("BUST! Play Again?")
+//
+//        }
+   }
+

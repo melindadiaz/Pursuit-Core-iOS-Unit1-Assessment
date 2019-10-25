@@ -11,6 +11,7 @@
 		4D29DDB22361FB4300886E04 /* FaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29DDB12361FB4300886E04 /* FaceCard.swift */; };
 		4D29DDB42361FCE500886E04 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29DDB32361FCE500886E04 /* Player.swift */; };
 		4D29DDB623622DDF00886E04 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29DDB523622DDF00886E04 /* Game.swift */; };
+		4D29DDEB23628C4400886E04 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29DDEA23628C4400886E04 /* Deck.swift */; };
 		576D1E602356839800765B16 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D1E5F2356839800765B16 /* main.swift */; };
 		576D1E692356845300765B16 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D1E682356845300765B16 /* Card.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		4D29DDB12361FB4300886E04 /* FaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCard.swift; sourceTree = "<group>"; };
 		4D29DDB32361FCE500886E04 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4D29DDB523622DDF00886E04 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4D29DDEA23628C4400886E04 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		576D1E5C2356839800765B16 /* BlackJack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BlackJack; sourceTree = BUILT_PRODUCTS_DIR; };
 		576D1E5F2356839800765B16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		576D1E682356845300765B16 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				576D1E682356845300765B16 /* Card.swift */,
+				4D29DDEA23628C4400886E04 /* Deck.swift */,
 				4D29DDAF2361F38D00886E04 /* Suit.swift */,
 				4D29DDB12361FB4300886E04 /* FaceCard.swift */,
 				4D29DDB32361FCE500886E04 /* Player.swift */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D29DDEB23628C4400886E04 /* Deck.swift in Sources */,
 				576D1E602356839800765B16 /* main.swift in Sources */,
 				4D29DDB623622DDF00886E04 /* Game.swift in Sources */,
 				4D29DDB02361F38D00886E04 /* Suit.swift in Sources */,
