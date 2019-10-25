@@ -18,7 +18,7 @@ class Game {
          hitPlayer: Bool) {
         self.deck = deck
         self.player = player
-      
+        
     }
     //fix this
     var hasMoreCards:Bool {
@@ -57,14 +57,13 @@ class Game {
         }
         
     }
- 
-    //fix this cause its not what they wanted
-//    func gamesStatus() {
-//        if userScore == 21 {
-//            print("BlackJack! Play Again?")
-//        } else if userScore <= 22 {
-//            print("BUST! Play Again?")
-//
-//        }
-   }
-
+    
+    func gamesStatus() {
+        if self.player.score == 21 {
+            print("BlackJack! Play Again?")
+        } else if self.player.score <= 22 {
+            print("BUST! Play Again?")
+            
+        }
+    }
+}
