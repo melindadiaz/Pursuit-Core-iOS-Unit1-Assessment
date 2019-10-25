@@ -18,20 +18,17 @@ class Game {
          hitPlayer: Bool) {
         self.deck = deck
         self.player = player
-        
+      
     }
     //fix this
     var hasMoreCards:Bool {
         return !deck.cards.isEmpty
     }
     
-    
     func newGame() {
         self.player.score = 0
         self.deck = Deck()
     }
-    
-    
     
     func hitOrStay() {
         print("Hit or stay?")
@@ -42,12 +39,7 @@ class Game {
         } else {
             self.computerVsPlayer()
         }
-        
-        
     }
-    
-    
-    
     
     func hitMe() {
         let hitCard = self.deck.takeFromDeck()

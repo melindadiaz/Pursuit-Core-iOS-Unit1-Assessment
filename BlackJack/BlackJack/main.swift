@@ -10,14 +10,15 @@ import Foundation
 
 var cards:[Card]!
 var player:Player!
-
-let game = Game(deck: cards, player: player, hitPlayer: true)
+//i am not sure why i had to bang my variables all I know is that it took me over an hour to figure that out to stop the errors
+let game = Game (deck: Deck(), player: player, hitPlayer: false)
 
 print("There are \(Card.newDeck(aceValue: 1).count) cards in a deck of cards")
 
 var playAgain = false
-
-let userPrompt = "Let's Play BlackJack!"
+repeat {
+    
+let _ = "Let's Play BlackJack!"
 
     print("Do you wish to continue playing? (yes, no)")
     let shouldContinuePlaying = readLine() ?? ""
@@ -27,7 +28,7 @@ let userPrompt = "Let's Play BlackJack!"
     } else {
         playAgain = false
     }
-} while playAgain {
+
 }
-//pushing to git hub
+    while playAgain
 
